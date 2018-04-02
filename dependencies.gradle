@@ -1,0 +1,133 @@
+ext.versions = [
+        dagger     : '2.14.1',
+
+        retrofit   : '2.3.0',
+        okhttp     : '3.9.1',
+
+        moxy       : '1.5.3',
+        cicerone   : '3.0.0',
+        binaryprefs: '1.0.0-BETA-2',
+
+        rxjava2    : '2.1.9',
+        rxbinding  : '2.1.0',
+        rxandroid  : '2.0.1',
+        rxrelay    : '2.0.0',
+
+        supportLibs: '27.0.2',
+        constraint : '1.0.2',
+        butterKnife: '8.8.1',
+        circleimage: '2.2.0',
+        picasso    : '2.5.2',
+        flow       : '1.1.0',
+        animations : '1.7.8',
+        fastScroll : '1.0.17',
+
+        joda       : '2.9.9.2',
+        stetho     : '1.5.0',
+        timber     : '4.6.1',
+        room       : '1.1.0-alpha1',
+
+        firebase   : '11.8.0',
+        google     : '11.8.0',
+        dropbox    : '3.0.6',
+        yandex     : '2.80',
+        junit      : '4.12',
+        assertj    : '3.6.2',
+        mockito    : '2.8.9',
+        job        : '1.2.4',
+
+        crashlytics: '2.9.0@aar',
+        multidex   : '1.0.2',
+        dexter     : '4.2.0',
+]
+
+ext.libraries = [
+        //Dagger
+        dagger             : "com.google.dagger:dagger:$versions.dagger",
+        daggerCompiler     : "com.google.dagger:dagger-compiler:$versions.dagger",
+
+        //Butterknife
+        butterKnife        : "com.jakewharton:butterknife:$versions.butterKnife",
+        butterKnifeCompiler: "com.jakewharton:butterknife-compiler:$versions.butterKnife",
+
+        //Moxy
+        moxy               : "com.arello-mobile:moxy:$versions.moxy",
+        moxyAppCompat      : "com.arello-mobile:moxy-app-compat:$versions.moxy",
+        moxyCompiler       : "com.arello-mobile:moxy-compiler:$versions.moxy",
+        moxyAndroid        : "com.arello-mobile:moxy-android:$versions.moxy",
+        cicerone           : "ru.terrakok.cicerone:cicerone:$versions.cicerone",
+
+        //Persistence
+        binaryprefs        : "com.github.iamironz:binaryprefs:$versions.binaryprefs",
+
+        //Rx
+        rxjava             : "io.reactivex.rxjava2:rxjava:$versions.rxjava2",
+        rxandroid          : "io.reactivex.rxjava2:rxandroid:$versions.rxandroid",
+        rxbinding          : "com.jakewharton.rxbinding2:rxbinding:$versions.rxbinding",
+        rxbindingAppCompat : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$versions.rxbinding",
+        rxrelay            : "com.jakewharton.rxrelay2:rxrelay:$versions.rxrelay",
+
+        //Retrofit
+        retrofit           : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGson       : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        rxadapter          : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+        okhttp             : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        interceptor        : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+        //Time
+        jodatime           : "net.danlew:android.joda:$versions.joda",
+        androidJob         : "com.evernote:android-job:$versions.job",
+
+        //Design
+        supportAnnotations : "com.android.support:support-annotations:$versions.supportLibs",
+        supportAppCompat   : "com.android.support:appcompat-v7:$versions.supportLibs",
+        supportDesign      : "com.android.support:design:$versions.supportLibs",
+        supportRecyclerView: "com.android.support:recyclerview-v7:$versions.supportLibs",
+        supportCardView    : "com.android.support:cardview-v7:$versions.supportLibs",
+        supportConstraint  : "com.android.support.constraint:constraint-layout:$versions.constraint",
+        supportSupport13   : "com.android.support:support-v13:$versions.supportLibs",
+        supportCore        : "com.android.support:support-core-ui:$versions.supportLibs",
+        fastScroll         : "com.simplecityapps:recyclerview-fastscroll:$versions.fastScroll",
+        dexter             : "com.karumi:dexter:$versions.dexter",
+        multidex           : "com.android.support:multidex:$versions.multidex",
+
+        //Other design
+        flow               : "com.nex3z:flow-layout:$versions.flow",
+        color              : "com.jaredrummler:colorpicker:$versions.color",
+        picasso            : "com.squareup.picasso:picasso:$versions.picasso",
+        circleimage        : "de.hdodenhof:circleimageview:$versions.circleimage",
+        animations         : "com.andkulikov:transitionseverywhere:$versions.animations",
+
+        // Developer Tools
+        stetho             : "com.facebook.stetho:stetho:$versions.stetho",
+        timber             : "com.jakewharton.timber:timber:$versions.timber",
+
+        //Room
+        room               : "android.arch.persistence.room:runtime:$versions.room",
+        roomCompiler       : "android.arch.persistence.room:compiler:$versions.room",
+        roomRx             : "android.arch.persistence.room:rxjava2:$versions.room",
+
+        //Google-services
+        googleAds          : "com.google.android.gms:play-services-ads:$versions.google",
+        googleDrive        : "com.google.android.gms:play-services-drive:$versions.google",
+        googleAuth         : "com.google.android.gms:play-services-auth:$versions.google",
+        googleGcm          : "com.google.android.gms:play-services-gcm:$versions.google",
+        dropbox            : "com.dropbox.core:dropbox-core-sdk:$versions.dropbox",
+
+        //Firebase
+        core               : "com.google.firebase:firebase-core:$versions.firebase",
+        messaging          : "com.google.firebase:firebase-messaging:$versions.firebase",
+        invites            : "com.google.firebase:firebase-invites:$versions.firebase",
+        analytics          : "com.google.firebase:firebase-analytics:$versions.firebase",
+        configs            : "com.google.firebase:firebase-config:$versions.firebase",
+
+        //Analytics
+        yandex             : "com.yandex.android:mobmetricalib:$versions.yandex",
+
+        // Test dependencies
+        junit              : "junit:junit:$versions.junit",
+        assertj            : "org.assertj:assertj-core:$versions.assertj",
+        mockito            : "org.mockito:mockito-core:$versions.mockito",
+]
+
+
+

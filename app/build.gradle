@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+android {
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildVer
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
+        applicationId "com.punchat"
+        versionCode 1
+        versionName "1.0." + versionCode
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+
+        if (project.hasProperty('devBuild')) {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //Design
+    implementation libraries.supportAnnotations
+    implementation libraries.supportAppCompat
+    implementation libraries.supportDesign
+    implementation libraries.supportRecyclerView
+    implementation libraries.supportCardView
+    implementation libraries.supportConstraint
+    implementation libraries.circleimage
+    //Rx
+    implementation libraries.rxjava
+    implementation libraries.animations
+    implementation libraries.rxandroid
+    implementation libraries.rxbinding
+    implementation libraries.rxbindingAppCompat
+    implementation libraries.rxrelay
+    //Database Room
+    implementation libraries.room
+    annotationProcessor libraries.roomCompiler
+    implementation libraries.roomRx
+    //Moxy
+    implementation libraries.moxy
+    implementation libraries.moxyAppCompat
+    annotationProcessor libraries.moxyCompiler
+    implementation libraries.moxyAndroid
+    implementation libraries.cicerone
+    //Network
+    implementation libraries.retrofit
+    implementation libraries.retrofitGson
+    implementation libraries.rxadapter
+    //Dagger
+    implementation libraries.dagger
+    annotationProcessor libraries.daggerCompiler
+    //Butterknife
+    implementation libraries.butterKnife
+    annotationProcessor libraries.butterKnifeCompiler
+
+    implementation libraries.okhttp
+    implementation libraries.interceptor
+    // Developer Tools
+    implementation libraries.timber
+    implementation libraries.stetho
+    implementation("com.crashlytics.sdk.android:crashlytics:$versions.crashlytics") {
+        transitive = true
+    }
+    implementation libraries.jodatime
+    //Tests
+    testImplementation libraries.junit
+    testImplementation libraries.assertj
+}
